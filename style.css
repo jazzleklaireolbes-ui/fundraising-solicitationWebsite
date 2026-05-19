@@ -287,3 +287,57 @@ body {
     font-weight: bold;
     font-size: 0.85rem;
 }
+
+/* ==========================================================================
+   Reports Page Specific Components
+   ========================================================================== */
+.reports-banner {
+    background: linear-gradient(135deg, #22c55e, #16a34a) !important;
+    border: none;
+    box-shadow: 0 4px 15px rgba(22, 163, 74, 0.15);
+}
+
+.reports-banner h4 {
+    color: #ffffff !important;
+    font-size: 1.75rem;
+    letter-spacing: -0.5px;
+}
+
+.chart-box-large {
+    min-height: 280px;
+    background-color: rgba(0, 0, 0, 0.02);
+    border: 1px dashed var(--border-color);
+}
+
+[data-bs-theme="dark"] .chart-box-large {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.mini-report-card {
+    border-left: 4px solid #16a34a !important;
+}
+
+.download-tool-row {
+    background-color: var(--bg-main);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 10px 14px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.download-tool-row:hover {
+    background-color: var(--border-color);
+    transform: translateX(3px);
+}
+
+.table-analytics {
+    font-size: 0.85rem;
+    vertical-align: middle;
+}
+
+.table-analytics th {
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+    color: var(--text-muted-custom);
+    text-uppercase;
+}
