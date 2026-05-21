@@ -26,10 +26,10 @@
                     <i class="bi bi-chevron-down submenu-chevron"></i>
                 </a>
                 <div class="collapse nav-submenu flex-column ps-4 gap-1" id="campaignsSubmenu">
-                    <a class="nav-link d-flex align-items-center text-white" href="#">
+                    <a class="nav-link d-flex align-items-center text-white" href="fundraising.html">
                         <i class="bi bi-circle-fill me-2 sub-menu-dot"></i> Fundraising
                     </a>
-                    <a class="nav-link d-flex align-items-center text-white" href="#">
+                    <a class="nav-link d-flex align-items-center text-white" href="solicitations.html">
                         <i class="bi bi-circle-fill me-2 sub-menu-dot"></i> Solicitation
                     </a>
                 </div>
@@ -40,7 +40,7 @@
                 
                 <span class="text-uppercase text-white-50 small px-2 mt-3 mb-1 sidebar-section-header">Quick Access</span>
                 <a class="nav-link" href="donations.html"><i class="bi bi-heart-fill me-2"></i> Donations</a>
-                <a class="nav-link active" href="collection.html"><i class="bi bi-collection-fill me-2"></i> Collection</a>
+                <a class="nav-link active" href="collections.html"><i class="bi bi-collection-fill me-2"></i> Collection</a>
                 <a class="nav-link" href="announcement.html"><i class="bi bi-bell-fill me-2"></i> Announcement</a>
             </nav>
             
@@ -86,69 +86,69 @@
                 <div>
                     <h3 class="fw-bold mb-2 hero-heading">Together, we build<br>a better community.</h3>
                     <div class="d-flex gap-2 mt-3">
-                        <button id="btn-collections-create-solicitation" class="btn btn-action-light fw-bold btn-sm rounded-pill px-3 py-2">
-                            <i class="bi bi-plus-lg"></i> Create Solicitation
-                        </button>
-                        <button id="btn-collections-view-history" class="btn btn-outline-light fw-bold btn-sm rounded-pill px-3 py-2">
-                            <i class="bi bi-clock-history"></i> View History
-                        </button>
+                        <a href="create_solicitation.html" id="btn-collections-create-solicitation" class="btn btn-action-light fw-bold btn-sm rounded-pill px-3 py-2 text-decoration-none d-inline-flex align-items-center">
+                            <i class="bi bi-plus-lg me-1"></i> Create Solicitation
+                        </a>
+                        <a href="#" id="btn-collections-view-history" class="btn btn-outline-light fw-bold btn-sm rounded-pill px-3 py-2 text-decoration-none d-inline-flex align-items-center">
+                            <i class="bi bi-clock-history me-1"></i> View History
+                        </a>
                     </div>
                 </div>
             </section>
 
             <section class="card data-card border-0 p-4 rounded-4">
-    <div class="text-center mb-4 border-bottom pb-3">
-        <h5 class="fw-bold text-success tracking-wide text-uppercase mb-0" style="letter-spacing: 1px;">Collections Overview</h5>
-    </div>
+                <div class="text-center mb-4 border-bottom pb-3">
+                    <h5 class="fw-bold text-success tracking-wide text-uppercase mb-0" style="letter-spacing: 1px;">Collections Overview</h5>
+                </div>
 
-    <div class="d-flex flex-column gap-3" id="collections-overview-loop-container">
-        
-        <div class="p-4 rounded-3 collection-item-card d-flex gap-4 align-items-start dynamic-collection-row" data-collection-id="">
-            
-            <div class="collection-media-thumbnail d-flex align-items-center justify-content-center text-muted position-relative overflow-hidden">
-                <img src="" class="position-absolute w-100 h-100 object-fit-cover d-none collection-live-image" alt="Campaign Banner">
-                <i class="bi bi-image fs-3 collection-image-fallback"></i>
-            </div>
-            
-            <div class="flex-grow-1 row g-3">
-                <div class="col-md-5">
-                    <h6 class="fw-bold text-dark mb-3 collection-event-title"></h6>
+                <div class="d-flex flex-column gap-3" id="collections-overview-loop-container">
                     
-                    <div class="small mb-1 text-muted">
-                        <span class="fw-semibold text-secondary">Goal Amount:</span> 
-                        <span class="collection-goal-value"></span>
-                    </div>
-                    <div class="small text-muted">
-                        <span class="fw-semibold text-secondary">Amount Raised:</span> 
-                        <span class="collection-raised-value"></span>
+                    <div class="p-4 rounded-3 collection-item-card d-flex gap-4 align-items-start dynamic-collection-row" data-collection-id="">
+                        
+                        <div class="collection-media-thumbnail d-flex align-items-center justify-content-center text-muted position-relative overflow-hidden">
+                            <img src="" class="position-absolute w-100 h-100 object-fit-cover d-none collection-live-image" alt="Campaign Banner">
+                            <i class="bi bi-image fs-3 collection-image-fallback"></i>
+                        </div>
+                        
+                        <div class="flex-grow-1 row g-3">
+                            <div class="col-md-5">
+                                <h6 class="fw-bold text-dark mb-3 collection-event-title"></h6>
+                                
+                                <div class="small mb-1 text-muted">
+                                    <span class="fw-semibold text-secondary">Goal Amount:</span> 
+                                    <span class="collection-goal-value"></span>
+                                </div>
+                                <div class="small text-muted">
+                                    <span class="fw-semibold text-secondary">Amount Raised:</span> 
+                                    <span class="collection-raised-value"></span>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-5">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <span class="small fw-semibold text-muted text-uppercase">Progress Bar</span>
+                                    <span class="small fw-bold text-success collection-progress-percentage"></span>
+                                </div>
+                                
+                                <div class="progress rounded-pill" style="height: 10px;">
+                                    <div class="progress-bar bg-success collection-live-progressbar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                
+                                <div class="mt-2">
+                                    <span class="small fw-semibold text-muted text-uppercase me-2">Status:</span>
+                                    <span class="status-pill text-uppercase collection-status-indicator"></span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="col-md-5">
-                    <div class="d-flex justify-content-between align-items-center mb-1">
-                        <span class="small fw-semibold text-muted text-uppercase">Progress Bar</span>
-                        <span class="small fw-bold text-success collection-progress-percentage"></span>
-                    </div>
-                    
-                    <div class="progress rounded-pill" style="height: 10px;">
-                        <div class="progress-bar bg-success collection-live-progressbar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    
-                    <div class="mt-2">
-                        <span class="small fw-semibold text-muted text-uppercase me-2">Status:</span>
-                        <span class="status-pill text-uppercase collection-status-indicator"></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
 
-    <div class="text-center mt-4 pt-2 border-top">
-        <button id="btn-collections-view-all-campaigns" class="btn btn-brand rounded-pill px-4 py-2 fw-semibold">
-            View All Campaigns &rarr;
-        </button>
-    </div>
-</section>
+                <div class="text-center mt-4 pt-2 border-top">
+                    <a href="#" id="btn-collections-view-all-campaigns" class="btn btn-brand rounded-pill px-4 py-2 fw-semibold text-decoration-none d-inline-block">
+                        View All Campaigns &rarr;
+                    </a>
+                </div>
+            </section>
         </main>
     </div>
 
@@ -159,7 +159,7 @@
                     <h5 class="modal-title fw-bold text-success text-center modal-custom-title">SCHEDULE</h5>
                 </div>
                 <div class="modal-body py-4 modal-custom-body" id="scheduleItemsContainer">
-                    </div>
+                </div>
                 <div class="modal-footer border-0 p-0">
                     <button type="button" class="btn text-white w-100 py-2 rounded-3 fw-bold modal-close-btn" data-bs-dismiss="modal">CLOSE SCHEDULE</button>
                 </div>
